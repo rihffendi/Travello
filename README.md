@@ -1,2 +1,2 @@
-# travello
-A Custom WordPress Theme
+# Travello
+A Custom WordPress Blog Theme
