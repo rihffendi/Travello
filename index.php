@@ -7,12 +7,19 @@
 	<section class="banner-area">
 		<div class="container-fluid">
 			<div class="banner">
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/banner-1.jpg" alt="" class="img-fluid">
+			<?php if(get_theme_mod('header_image')):?>
+				<img src="<?php echo esc_url(get_theme_mod('header_image')) ;?>" alt="" class="img-fluid">
+			<?php endif;?>
 			</div>
 		</div>
 		<div class="banner-title text-center">
-			<h1 class="text-lg text-light">Travel</h1>
-			<span class="small text-light">Make Your Journey Always Better</span>
+			<?php if(get_theme_mod('header_text_field')): ?>
+				<h1 class="text-lg text-light"><?php echo get_theme_mod('header_text_field') ; ?></h1>
+			<?php endif; ?>
+			
+			<?php if(get_theme_mod('header_desc_field')): ?>
+				<span class="small text-light"><?php echo get_theme_mod('header_desc_field') ;?></span>
+			<?php endif;?>
 		</div>
 	</section>
 	<!-- banner area ends -->

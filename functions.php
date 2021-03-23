@@ -8,9 +8,12 @@
 */
 
 $dir = get_template_directory();
+
+/* All css,js include here*/
 require $dir.'/inc/enqueue.php'; 
 
-
+/* Customizing Settings here*/
+require $dir.'/templates/helpers/customizer.php'; 
 
 /* Theme Support */
 
@@ -36,15 +39,10 @@ function travello_nav_menu(){
 add_action( 'init', 'travello_nav_menu');
 
 
-
-
-
 /* Logo area */
 
 function change_logo_class( $html ) {
-
     $html = str_replace( 'custom-logo', 'logo-img', $html );
-
     return $html;
 }
 
