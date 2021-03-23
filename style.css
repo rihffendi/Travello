@@ -34,16 +34,23 @@ body{
 	font: normal 900 1rem 'Rale';
 }
 
-.img-100{
+.logo-img{
 	width: 100px;
+	height: 100px;
 }
-.navbar-nav .nav-item .nav-link{
+.navbar-nav li{
+	display: block;
+	padding: 0.5rem 0;
+}
+.navbar-nav li a{
 	padding: 2vw 1vw !important;
 	transition: background 0.5s ease;
+	color: #f8f9fa!important;
 }
-.navbar-nav .nav-item .nav-link:hover{
+.navbar-nav li a:hover{
 	color: var(--primary-color) !important;
 	transition: 0.5s ease;
+	text-decoration: none;
 }
 
 

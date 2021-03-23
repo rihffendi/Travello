@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?>>
 <head>
 
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo( 'charset' )?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Travel Website</title>
 
 	<?php wp_head();?>
 
@@ -16,32 +15,31 @@
 	<div class="container pt-3">
 		<nav class="navbar navbar-expand-lg">
 		  <a class="navbar-brand text-light" href="#">
-		  	<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="" class="img-100">
+		  	<?php if(function_exists('the_custom_logo')){
+	  			the_custom_logo();
+		  	}
+		  	else{
+		  		bloginfo( 'name' );	
+		  	}
+		  	?>
 		  </a>
 		  <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 		  </button>
 
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav ml-auto ">
-		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">Home</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">Photography</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">About</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">Travel</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">People</a>
-		      </li>
-		    </ul>
-		    
-		  </div>
+		  	<?php 
+		  		$args = [
+		  			'theme_location' => 'primary-menu',
+		  			'container' => 'div',
+		  			'container_class' => 'collapse navbar-collapse',
+		  			'container_id' => 'navbarSupportedContent',
+		  			'menu' => 'ul',
+		  			'menu_class' =>'navbar-nav ml-auto',
+		  			'fallback_cb' => false
+		  		];
+
+		  		wp_nav_menu( $args );
+		  	?>
 		</nav>	
 	</div>
 </header>

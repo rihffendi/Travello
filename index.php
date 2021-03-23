@@ -18,7 +18,7 @@
 	<!-- banner area ends -->
 
 	<!-- post area starts -->
-	<section class="post-area pt-5">
+	<section class="post-area">
 		<div class="container">
 			<div class="row">
 			<!-- article  area starts-->
