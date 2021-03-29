@@ -16,7 +16,7 @@
 			<?php if(get_theme_mod('header_text_field')): ?>
 				<h1 class="text-lg text-light"><?php echo get_theme_mod('header_text_field') ; ?></h1>
 			<?php endif; ?>
-			
+
 			<?php if(get_theme_mod('header_desc_field')): ?>
 				<span class="small text-light"><?php echo get_theme_mod('header_desc_field') ;?></span>
 			<?php endif;?>
@@ -127,6 +127,22 @@
 						    <hr>
 						</div>
 						<!-- starts ends here -->
+						
+						<!-- categories starts here -->
+							<section class="categories pt-5">
+								<h3>Categories</h3>
+								<hr>
+								<div class="cat flex flex-row flex-wrap">
+									<a href=""><span>camera</span></a>
+									<a href=""><span>bike</span></a>
+									<a href=""><span>article</span></a>
+									<a href=""><span>events</span></a>
+									<a href=""><span>bicycle</span></a>
+									<a href=""><span>tv</span></a>
+									<a href=""><span>phone</span></a>
+								</div>
+							</section>
+						<!-- categories ends here -->
 					</aside>
 					<!-- sidebar area ends -->
 				</div>

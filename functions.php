@@ -9,11 +9,14 @@
 
 $dir = get_template_directory();
 
-/* All css,js include here*/
+/* All CSS,JS include here*/
 require $dir.'/inc/enqueue.php'; 
 
 /* Customizing Settings here*/
 require $dir.'/templates/helpers/customizer.php'; 
+
+
+/*------------------------------------------------*/
 
 /* Theme Support */
 

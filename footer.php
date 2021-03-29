@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 				<div class="widget-1  pt-5">
-	  				<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="" class="img-100">
+	  				<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="" class="logo-img">
 					<p class="font-weight-light text-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
 					<div class="social-media">
 						<span><i class="fab fa-facebook-square"></i></span>

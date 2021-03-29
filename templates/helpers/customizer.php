@@ -9,7 +9,7 @@
 
 function travello_customizer($wp_customizer){
 
-	//new section of settings
+	// Header Settings
 	$wp_customizer->add_section('header',array(
 		'title' => __('Header Settings','travello'),
 		'priority' => 70
@@ -24,7 +24,7 @@ function travello_customizer($wp_customizer){
 		'capabilty' =>'edit_theme_options'
 	));
 
-	//control of settings
+	//Header Image control settings
 	$wp_customizer->add_control(new WP_Customize_Image_Control($wp_customizer,'header_image',array(
 		'label' => __('Header Image','travello'),
 		'section' => 'header'
@@ -43,7 +43,7 @@ function travello_customizer($wp_customizer){
 		'default' => 'Travel'
 	));
 
-	//control of settings
+	//Header Title control settings
 	$wp_customizer->add_control('header_text_control',array(
 		'label' => __('Header Title','travello'),
 		'description' => 'Change your header title here',
@@ -64,7 +64,7 @@ function travello_customizer($wp_customizer){
 		'default' => 'Make Your Journey Always Better'
 	));
 
-	//control of settings
+	//Header Description control settings
 	$wp_customizer->add_control('header_description_control',array(
 		'label' => __('Header Description','travello'),
 		'description' => 'Change your header description here',
