@@ -33,6 +33,9 @@ html,body{
 body{
 	font: normal 900 1rem 'Rale';
 }
+.card-width {
+	width :18rem;
+}
 
 .logo-img{
 	width: 100px;
@@ -106,8 +109,7 @@ body{
     float:left;
     margin-left: 2rem;
     margin-right: 2rem;
-    width: 18rem;
-}
+ }
 .card:hover{
 	box-shadow: none;
 }
@@ -137,7 +139,7 @@ body{
 }
 .latest-aside .latest-post .small-section span{
   	font-weight: 100;
-	font-size: 10px;
+	font-size: 13px;
 
 }
 
@@ -148,7 +150,10 @@ body{
     padding-bottom: 1rem;
 
 }
-.page-link{
+.pagination  div nav ul {
+	display: flex;
+}
+.pagination  div nav ul span {
 	color:#272625;
 	border: 0;
 	margin: 0;
@@ -243,4 +248,12 @@ body{
 	transition: color 0.5s ease;
 	box-shadow: none;	
 	transition: box-shadow 0.5s ease;
+}
+
+
+@media (min-width: 1200px){
+	.container {
+	    max-width: 1350px;
+	}
+
 }

@@ -44,10 +44,22 @@ add_action( 'init', 'travello_nav_menu');
 
 /* Logo area */
 
-function change_logo_class( $html ) {
+function travello_logo_class( $html ) {
     $html = str_replace( 'custom-logo', 'logo-img', $html );
     return $html;
 }
 
-add_filter( 'get_custom_logo', 'change_logo_class' );
+add_filter( 'get_custom_logo', 'travello_logo_class' );
+
+
+/*Excerpt Length */
+
+function travello_excerpt($length){
+	return 15;
+}
+
+add_filter('excerpt_length', 'travello_excerpt');
+
+
+
 ?>

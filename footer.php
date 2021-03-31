@@ -19,12 +19,34 @@
 				<div class="widget-2  pt-5">
 					<h5 class="text-light">Recent Post</h5>
 					<hr>
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-4.jpg" alt="">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-2.jpg" alt="">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-1.jpg" alt="">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-3.jpg" alt="">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-4.jpg" alt="">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/blog-2.jpg" alt="">					
+					<?php
+					$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;
+
+					$args = array(
+						'post-type' => 'post',
+						'order' => 'DESC',
+						'posts_per_page' => 6,
+						'data_query' => array(
+							'after' => '-30 days',
+							'column' => 'post_data'
+						),
+						'paged' => $paged
+					);
+
+					$loop = new Wp_Query($args);
+					?>
+
+					<?php if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post();?>
+						<?php if(has_post_thumbnail()) : ?>
+							<a href="<?php the_permalink( ); ?>"><img src="<?php echo get_the_post_thumbnail_url();?>" alt=""></a>
+						<?php endif;?>
+
+					<?php 
+						endwhile; 
+						endif;
+	 					wp_reset_query();
+	 					wp_reset_postdata();
+					?>			
 				</div>
 			</div>
 			<div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
