@@ -3,7 +3,7 @@
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 				<div class="widget-1  pt-5">
 	  				<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="" class="logo-img">
 					<p class="font-weight-light text-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
@@ -15,7 +15,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-3  col-md-12 col-sm-12 col-xs-12">
 				<div class="widget-2  pt-5">
 					<h5 class="text-light">Recent Post</h5>
 					<hr>
@@ -49,8 +49,8 @@
 					?>			
 				</div>
 			</div>
-			<div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
-				<div class="widget-3  pt-5">
+			<div class="col-lg-3  col-md-12 col-sm-12 col-xs-12">
+				<div class="widget-3  pt-5 p-3">
 					<h5 class="text-light">Newsletter</h5>
 					<hr>
 					<form>
@@ -59,6 +59,30 @@
 					     <button class="btn btn-secondary shadow-none mt-3" type="button">Subscribe</button>
 					  </div>
 					</form>
+				</div>
+			</div>
+			<div class="col-lg-3  col-md-12 col-sm-12 col-xs-12">
+				<div class="widget-4  pt-5">
+					<h5 class="text-light">All Pages</h5>
+					<hr>
+				<!-- 	<nav class="nav flex-column">
+					  <a class="nav-link text-light" href="#">Active</a>
+					  <a class="nav-link text-light" href="#">Link</a>
+					  <a class="nav-link text-light" href="#">Link</a> -->
+			
+					  	<?php 
+					  		$args = [
+					  			'theme_location' => 'footer-menu',
+					  			'container' => 'div',
+					  			'container_class' => 'widget-4',
+					  			'menu' => 'nav',
+					  			'menu_class' =>'nav flex-column',
+					  			'fallback_cb' => false
+					  		];
+
+					  		wp_nav_menu( $args );
+					  	?>
+					<!-- </nav> -->
 				</div>
 			</div>
 		</div>

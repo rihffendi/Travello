@@ -12,8 +12,7 @@
 
 <!-- header area starts -->
 <header>
-	<div class="container pt-3">
-		<div class="bg-dark">
+	<div class="container-fluid bg-dark">
 		<nav class="navbar navbar-expand-lg">
 		  <a class="navbar-brand text-light" href="#">
 		  	<?php if(function_exists('the_custom_logo')){
@@ -42,7 +41,6 @@
 		  		wp_nav_menu( $args );
 		  	?>
 		</nav>	
-		</div>
 	</div>
 </header>
 

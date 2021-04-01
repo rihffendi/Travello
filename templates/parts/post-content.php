@@ -11,7 +11,7 @@
 	<?php endif; ?>
 
 	<div class="card-body">
-		<h3 class="card-title"><a  class="text-dark" href="<?php the_permalink();?>"><?php echo the_title(); ?></a></h3>
+		<h4 class="card-title"><a  class="text-dark" href="<?php the_permalink();?>"><?php echo the_title(); ?></a></h4>
 		<p class="card-text font-weight-light small"><?php echo get_the_excerpt(); ?></p>
 		<a href="<?php the_permalink();?>" class="btn btn-sm btn-dark">read more</a>
 		<hr>

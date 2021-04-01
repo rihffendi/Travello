@@ -3,21 +3,16 @@
 
 <!-- main area starts-->
 <main class="main-area">
-
 	<!-- post area starts -->
 	<section class="post-area pt-5">
 		<div class="container">
 			<div class="row">
 			<!-- article  area starts-->
-				<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-					<?php get_template_part('templates/parts/post','content');?>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center pt-5">
+					<h4><?php esc_html_e( 'Sorry, Page not found.' ); ?></h4>
 				</div>
 				<!-- article area ends -->
-				<div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
-					<!-- sidebar area starts -->
-					 <?php get_sidebar();?>
-					<!-- sidebar area ends -->
-				</div>
+	
 			</div>
 		</div>
 	</section>
@@ -43,4 +38,4 @@
 </main>
 <!-- main area ends -->
 
-<?php get_footer();?>
+<?php wp_footer();?>

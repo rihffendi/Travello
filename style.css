@@ -33,6 +33,10 @@ html,body{
 body{
 	font: normal 900 1rem 'Rale';
 }
+
+
+
+
 .card-width {
 	width :18rem;
 }
@@ -176,9 +180,7 @@ body{
 	background: #343a40;
 	margin-top: 2rem;
 }
-.widget-1{
 
-}
 
 .widget-1 p{
     font-size: 12px;
@@ -209,7 +211,7 @@ body{
 
 .widget-2 img{
 	padding: 0.2rem 0.1rem;
-    width: 100px;
+    width: 99px;
     height: 100px;
     margin-bottom: 0.2rem;
     box-shadow: 0 0 1.2rem #090a0a7a;
@@ -219,13 +221,24 @@ body{
 .widget-2 img:hover{
     box-shadow: none;
 }
-.widget-2 hr, .widget-3 hr{
+.widget-2 hr, .widget-3 hr, .widget-4 hr {
     border-top: 1px solid white;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
+.widget-4 ul li a{
+    display: block;
+    padding: .5rem 1rem;
+    color: #f8f9fa!important;
+	transition: background 0.5s ease;
+}
 
+.widget-4 ul li a:hover{
+	color: var(--primary-color) !important;
+	transition: 0.5s ease;
+	text-decoration: none;
+}
 
 .categories .cat a{
 	margin:1.3rem 0;

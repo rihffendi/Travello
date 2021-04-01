@@ -1,31 +1,10 @@
-<?php get_header(); ?>
+<?php get_header('color'); ?>
 
 
 <!-- main area starts-->
 <main class="main-area">
-	<!-- banner area starts -->
-	<section class="banner-area">
-		<div class="container-fluid">
-			<div class="banner">
-			<?php if(get_theme_mod('header_image')):?>
-				<img src="<?php echo esc_url(get_theme_mod('header_image')) ;?>" alt="" class="img-fluid">
-			<?php endif;?>
-			</div>
-		</div>
-		<div class="banner-title text-center">
-			<?php if(get_theme_mod('header_text_field')): ?>
-				<h1 class="text-lg text-light"><?php echo get_theme_mod('header_text_field') ; ?></h1>
-			<?php endif; ?>
-
-			<?php if(get_theme_mod('header_desc_field')): ?>
-				<span class="small text-light"><?php echo get_theme_mod('header_desc_field') ;?></span>
-			<?php endif;?>
-		</div>
-	</section>
-	<!-- banner area ends -->
-
 	<!-- post area starts -->
-	<section class="post-area">
+	<section class="post-area pt-5">
 		<div class="container">
 			<div class="row">
 			<!-- article  area starts-->
